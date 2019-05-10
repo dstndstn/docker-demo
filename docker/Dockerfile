@@ -4,6 +4,6 @@ RUN apt -y update && apt install -y --no-install-recommends \
 RUN pip3 install numpy==1.15 emcee
 RUN mkdir /myproject
 WORKDIR /myproject
-RUN git clone https://github.com/dstndstn/docker-demo.git && echo 2
+RUN git clone https://github.com/dstndstn/docker-demo.git . && echo 2
 COPY my-data-file.txt /myproject
-CMD ["python3", "docker-demo/amazing.py", "my-data-file.txt"]
+CMD ["python3", "amazing.py", "my-data-file.txt"]
