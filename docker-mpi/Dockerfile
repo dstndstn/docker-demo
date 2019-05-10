@@ -27,6 +27,6 @@ WORKDIR /myproject
 # you probably want to use a tagged version of your code:
 #RUN git clone --branch v1.7 https://github.com/dstndstn/demo.git .
 
-RUN git clone https://github.com/dstndstn/docker-demo.git .
+RUN git clone https://github.com/dstndstn/docker-demo.git . && echo 2
 
 #CMD ["python3", "/demo/sampler.py"]
